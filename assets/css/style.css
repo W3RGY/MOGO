@@ -27,5 +27,7 @@ h1, h2, h3, h4, h5, h6 {
 .intro {
 	width: 100%;
 	height: 100vh;  /* 100vh stands for the entire height of the browser window */
-
+	background: url("../images/images/intro.jpg") center no-repeat;
+	-webkit-background-size: cover;
+	background-size: cover;
 }

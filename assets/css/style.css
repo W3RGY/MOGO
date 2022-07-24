@@ -25,9 +25,127 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Intro */
 .intro {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
 	width: 100%;
 	height: 100vh;  /* 100vh stands for the entire height of the browser window */
 	background: url("../images/images/intro.jpg") center no-repeat;
 	-webkit-background-size: cover;
 	background-size: cover;
+}
+
+.intro__inner {
+	width: 100%;
+	max-width: 880px;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.intro__title {
+	color: #fff;
+	font-size: 150px;
+	font-weight: 700;
+	text-transform: uppercase;
+	line-height: 1;
+}
+
+.intro__title:after {
+	content: "";
+	display: block;
+	width: 60px;
+	height: 3px;
+	background-color: #fff;
+	margin: 60px auto;
+
+}
+
+.intro__suptitle {
+	margin-bottom: 20px;
+	font-size: 72px;
+	font-family: 'Kaushan Script', cursive;
+	color: #fff;
+}
+
+/* Header */
+.header {
+	width: 100%;
+	padding-top: 30px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 1000;
+}
+
+.header__inner {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.header__logo {
+	font-size: 30px;
+	font-weight: 700;
+	color: #fff;
+}
+
+/* NaV */
+.nav {
+	font-size: 14px;
+	text-transform: uppercase;
+}
+
+.nav__link {
+	display: inline-block;
+	vertical-align: top;
+	margin: 0 15px;
+	color: #fff;
+	position: relative;
+	text-decoration: none;
+
+	transition: color .1s linear;
+}
+
+.nav__link:after {
+	content: "";
+	display: block;
+	width: 100%;
+	height: 3px;
+	opacity: 0;
+	background-color: #fce38a;
+	position: absolute;
+	top: 100%;
+	left: 0;
+	z-index: 1;
+
+	transition: opacity .1s linear;
+}
+
+.nav__link:hover {
+	color: #fce38a;
+}
+
+.nav__link:hover:after {
+	opacity: 1;
+}
+
+/* Button */
+.btn {
+	display: inline-block;
+	vertical-align: top;
+	padding: 8px 30px;
+	border: 3px solid #fff;
+	color: #fff;
+	text-transform: uppercase;
+	font-size: 14px;
+	font-weight: bold;
+	text-decoration: none;
+
+	transition: background .1s linear;
+}
+
+.btn:hover {
+	background-color: #fff;
+	color: #333;
 }

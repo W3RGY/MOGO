@@ -126,8 +126,13 @@ h1, h2, h3, h4, h5, h6 {
 	color: #fce38a;
 }
 
-.nav__link:hover:after {
+.nav__link:hover:after,
+.nav__link.active:after {
 	opacity: 1;
+}
+
+.nav__link.active {
+	color: #fce38a;
 }
 
 /* Button */
@@ -142,10 +147,212 @@ h1, h2, h3, h4, h5, h6 {
 	font-weight: bold;
 	text-decoration: none;
 
-	transition: background .1s linear;
+	transition: background .1s linear, color .1s linear;
 }
 
 .btn:hover {
 	background-color: #fff;
 	color: #333;
 }
+
+/* Slider */
+.slider {
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	z-index: 1;
+}
+
+.slider__inner {
+	display: flex;
+	justify-content: space-between;
+}
+
+.slider__item {
+	width: 23%;
+	padding: 20px 0;
+	position: relative;
+	border-top: 3px solid #fff;
+	font-size: 18px;
+	color: #fff;
+	text-transform: uppercase;
+	opacity: 0.7;
+}
+
+.slider__item.active {
+	opacity: 1;
+}
+
+.slider__item.active:before {
+	content: "";
+	display: block;
+	width: 70px;
+	height: 3px;
+	background-color: #f38181;
+	position: absolute;
+	top: -3px;
+	left: 0;
+	z-index: 1;
+}
+
+.slider__num {
+	font-size: 24px;
+	font-weight: 700;
+}
+
+/* Section */
+.section {
+	padding: 80px 0;
+}
+
+.section__header {
+	width: 100%;
+	max-width: 950px;
+	margin: 0 auto 40px;
+	text-align: center;
+}
+
+.section__suptitle {
+	font-family: 'Kaushan Script', cursive;
+	font-size: 24px;
+	color: #333;
+}
+
+.section__title {
+	font-size: 30px;
+	font-weight: 700;
+	color: #333;
+	text-transform: uppercase;
+}
+
+.section__title:after {
+	content: "";
+	display: block;
+	width: 60px;
+	height: 3px;
+	margin: 30px auto;
+	background-color: #f38181;
+}
+
+.section__text {
+	font-family: 'Roboto', sans-serif;
+	font-size: 15px;
+	color: #999;
+}
+
+/* About */
+.about {
+	display: flex;
+	justify-content: space-between;
+}
+
+.about__item {
+	width: 380px;
+	background-color: #95e1d3;
+	position: relative;
+}
+
+.about__item:hover .about__img {
+	transform: translate3d(-10px, -10px, 0);
+}
+
+.about__item:hover .about__img img {
+	opacity: .1;
+}
+
+.about__item:hover .about__text {
+	opacity: 1;
+}
+
+.about__img {
+	background: linear-gradient(to bottom, #f38181, #fce38a);
+	transition: transform .2s linear;
+}
+
+.about__img img {
+	display: block;
+	transition: opacity .1s linear;
+}
+
+.about__text {
+	width: 100%;
+	color: #fff;
+	text-transform: uppercase;
+	font-weight: 700;
+	font-size: 18px;
+	text-align: center;
+	position: absolute;
+	opacity: 0;
+	top: 50%;
+	left: 0;
+	z-index: 2;
+	transform: translate3d(0, -50%, 0);
+	transition: opacity .2s linear;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

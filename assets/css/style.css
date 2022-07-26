@@ -216,8 +216,10 @@ hr {
 }
 
 .section--devices {
+	margin-bottom: 40px;
 	background: url("../images/devices-bg.jpg") center no-repeat;
 	background-size: cover;
+	-webkit-background-size: cover;
 	padding-bottom: 0;
 }
 
@@ -392,7 +394,14 @@ hr {
 	z-index: 1;
 }
 
+/* WeDo */
+.wedo {
+	display: flex;
+}
 
+.wedo__item {
+	width: 50%;
+}
 
 
 

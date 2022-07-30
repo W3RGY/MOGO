@@ -730,8 +730,46 @@ hr {
 
 }
 
+/* Blog */
+.blog {
+	display: flex;
+}
 
+.blog__item {
+	width: 30%;
+}
 
+.blog__header {
+	position: relative;
+}
+
+.blog__photo {
+	display: block;
+	width: 100%;
+	height: auto;
+}
+
+.blog__date {
+	padding: 10px 20px;
+	font-style: italic;
+	font-size: 15px;
+	font-family: 'Roboto', sans-serif;
+	color: #fff;
+	font-weight: 300;
+	text-align: center;
+	background-color: #95e1d3;
+	position: absolute;
+	bottom: 10px;
+	left: -10px;
+}
+
+.blog__date-day {
+	font-family: 'Montserrat', sans-serif;
+	line-height: 1;
+	font-size: 30px;
+	font-weight: 700;
+	font-style: normal;
+}
 
 
 

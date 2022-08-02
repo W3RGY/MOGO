@@ -45,6 +45,8 @@ hr {
 	justify-content: center;
 	width: 100%;
 	height: 100vh;  /* 100vh stands for the entire height of the browser window */
+	min-height: 820px;
+	position: relative;
 	background: url("../images/intro.jpg") center no-repeat;
 	-webkit-background-size: cover;
 	background-size: cover;
@@ -91,6 +93,20 @@ hr {
 	left: 0;
 	right: 0;
 	z-index: 1000;
+}
+
+.header.fixed {
+	background-color: #e88683;
+	position: fixed;
+	top: 0;
+	right: 0;
+	left: 0;
+	transform: translate3d(0, 0, 0);
+	box-shadow: 0 2px 10px rgb(0, 0, 0, .2);
+}
+
+.header.active {
+	background-color: #e88683;
 }
 
 .header__inner {
@@ -149,6 +165,54 @@ hr {
 .nav__link.active {
 	color: #fce38a;
 }
+
+/* Nav toggle */
+ .nav-toggle {
+	display: none;
+	width: 30px;
+	padding: 10px 0;
+	position: absolute;
+	font-size: 0;
+	color: transparent;
+	border: 0;          /*unstyle button*/
+	background: none;	/*unstyle button*/
+	cursor: pointer;
+	top: 24px;
+	right: 24px;
+	z-index: 1;
+ }
+
+ .nav-toggle__item {
+	display: block;
+	width: 100%;
+	height: 3px;
+	background-color: #fff;
+	position: absolute;
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	margin: auto;
+ }
+
+ .nav-toggle__item:before,
+ .nav-toggle__item:after {
+	content: "";
+	width: 100%;
+	height: 3px;
+	position: absolute;
+	left: 0;
+	z-index: 1;
+	background-color: #fff;
+ }
+
+ .nav-toggle__item:before {
+	top: -8px;
+ }
+
+ .nav-toggle__item:after {
+	bottom: -8px;
+ }
 
 /* Button */
 .btn {
@@ -1193,9 +1257,30 @@ hr {
 }
 
 @media (max-width: 770px) {
+	/* Intro */
+	.intro {
+		min-height: 650px;
+	}
+	/* Header */
+	.header {
+		padding: 10px 0;
+	}
 	/* Nav */
 	.nav {
 		display: none;
+		width: 100%;
+		position: absolute;
+		top: 100%;
+		left: 0;
+		background-color: #e88683;
+	}
+	.nav__link {
+		display: block;
+		margin: 0;
+		padding: 8px 20px;
+	}
+	.nav-toggle {
+		display: block;
 	}
 	/* Slider */
 	.slider__text {

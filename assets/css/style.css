@@ -194,6 +194,21 @@ hr {
 	left: 0;
 	bottom: 0;
 	margin: auto;
+	transition: background .2s linear;
+ }
+
+ .nav-toggle.active .nav-toggle__item {
+	background: none;
+ }
+
+ .nav-toggle.active .nav-toggle__item:before {
+	transform-origin: left top;
+	transform: rotate(45deg) translate3d(0px, -2px, 0);
+ }
+
+ .nav-toggle.active .nav-toggle__item:after {
+	transform-origin: left bottom;
+	transform: rotate(-45deg) translate3d(0px, 3px, 0);
  }
 
  .nav-toggle__item:before,
@@ -205,6 +220,7 @@ hr {
 	left: 0;
 	z-index: 1;
 	background-color: #fff;
+	transition: transform .2s linear;
  }
 
  .nav-toggle__item:before {
@@ -1274,6 +1290,9 @@ hr {
 		top: 100%;
 		left: 0;
 		background-color: #e88683;
+	}
+	.nav.active {
+		display: block;
 	}
 	.nav__link {
 		display: block;

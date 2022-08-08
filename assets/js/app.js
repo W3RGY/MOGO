@@ -1,14 +1,24 @@
 $(function () {
 
 	var introH = $("#intro").innerHeight(),
-		header = $("header"),
-		scrollOffSet = 0;
+		header = $("#header"),
+		scrollOffSet = $(window).scrollTop();
+
+		checkScroll(scrollOffSet);
 
 	$(window).on("scroll", function () {
-
 		scrollOffSet = $(this).scrollTop();
 
-		console.log(scrollOffSet)
+		checkScroll(scrollOffSet);
 
 	});
+
+	function checkScroll(scrollOffSet) {
+
+		if (scrollOffSet >= introH) {
+			header.addClass("fixed");
+		} else {
+			header.removeClass("fixed");
+		}
+	};
 });

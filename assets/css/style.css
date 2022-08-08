@@ -96,6 +96,7 @@ hr {
 }
 
 .header.fixed {
+	padding: 10px 0;
 	background-color: #e88683;
 	position: fixed;
 	top: 0;

@@ -44,9 +44,29 @@ $(function () {
 	$("#nav_toggle").on("click", function (event) {
 		event.preventDefault();
 
+
 		$(this).toggleClass("active");
 		$("#nav").toggleClass("active");
 	})
+
+	/* Collapse */
+	$("[data-collapse]").on("click", function (event) {
+		event.preventDefault();
+
+		var $this = $(this),
+			blockId = $this.data('collapse');
+
+		$(blockId).slideToggle();
+		$this.toggleClass("active");
+	});
+
+	/* Slider */
+	$("[data-slider]").slick({
+		infinity: true,
+		fade: false,
+		slidesToShow: 1,
+		slidesToScroll: 1
+	});
 
 
 });
